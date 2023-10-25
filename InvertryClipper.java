@@ -30,7 +30,7 @@ class InvertryClipper
       int ICod = sobj.nextInt();
       System.out.println(" Add the Inventry");
       int Inv = sobj.nextInt();
-      Cobj.Accept(ICod, Inv);
+      Cobj.Remove(ICod, Inv);
     }
     else if(ch == 'R')
     {
@@ -38,7 +38,7 @@ class InvertryClipper
       int ICod = sobj.nextInt();
       System.out.println(" Remove the Inventry");
       int Inv = sobj.nextInt();
-      Cobj.Accept(ICod, Inv);
+      Cobj.Remove(ICod, Inv);
     }
     else if(ch == 'G')
     {
