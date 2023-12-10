@@ -1,11 +1,9 @@
-
  
 import java.io.*;
 import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
-
 
 public class CalenderDate {
         public static void main(String[] args) {
@@ -50,4 +48,3 @@ System.out.println(" The day is "+dayOfWeek);
     return day;
     }    
 }
-
