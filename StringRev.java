@@ -1,40 +1,36 @@
-import java.util.*;
+import java.util.Scanner;
 
 class StringRev
 {
- public static void main(String [] Arg)
+ public static void main(String [] arg)
  {
-   Scanner sobj = new Scanner (System.in);
-   System.out.println("Enter the String ");
-   String stt = sobj.nextLine();
-   Revv robj = new Revv(stt);
-   System.out.println("New String is "+robj.Rev());
+  System.out.println(" Enter the String ");
+  Scanner sobj = new Scanner(System.in);
+  String sStr = sobj.nextLine();
+  RevStringCls robj = new RevStringCls(sStr);
+  System.out.println (" Reverse string is : "+ robj.Reverse());
  }
 }
 
-class Revv
+class RevStringCls
 {
-  private String str;
+ public String str;
+ public char [] crr;
 
-  public Revv(String X)
+public RevStringCls(String xGet)
+{
+  str=xGet;
+}
+ public String Reverse()
+ {
+    int A = 0;
+  crr = str.toCharArray();
+  char [] cRev = new char[str.length()];
+
+  for(int i = str.length()-1;i>=0; i--)
   {
- str =X;
-  }
-  public String Rev()
-  {
-    char ch [] = str.toCharArray();
-    int Start = 0;
-    int End = str.length()-1;
-    char temp ;
-  
-    while (Start < End)
-    {
-      temp = ch[Start];
-      ch[Start] = ch [End];
-      ch[End] = temp;      
-        Start ++;
-        End--;
-    }
-     return new String (ch);
-  }
+    cRev[A] = crr[i];
+    A++;
+  }  return new String(cRev);
+ }
 }
